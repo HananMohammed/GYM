@@ -7,6 +7,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -18,7 +19,9 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME = '/home';
-
+    protected $namespace = 'App\Http\Controllers';
+    protected $frontNamespace = 'App\Http\Controllers\Front';
+    protected $adminNamespace = 'App\Http\Controllers\Admin';
     /**
      * The controller namespace for the application.
      *
@@ -46,6 +49,18 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
+
+            Route::middleware([ 'web','localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ])
+                ->prefix(LaravelLocalization::setLocale())
+                ->name('admin.')
+                ->namespace($this->adminNamespace)
+                ->group(base_path('routes/admin.php'));
+
+            Route::middleware([ 'web','localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ])
+                ->prefix(LaravelLocalization::setLocale())
+                ->namespace($this->frontNamespace)
+                ->name('front.')
+                ->group(base_path('routes/front.php'));
         });
     }
 
