@@ -12,11 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::group(['prefix' => 'admin'], function(){
-    /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-    Route::get('/admin', function()
-    {
-        return dd('admin text');
-    });
+Route::group(['prefix' => 'dashboard'], function(){
+    Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+        return view('admin.index');
+
+    })->name('dashboard');
+
+    Route::get('/profile','UserProfileController@show' )->name('profile');
+    Route::post("/profile-information" , "ProfileInformationController@update")->name('user-profile-information.update');
 });
 

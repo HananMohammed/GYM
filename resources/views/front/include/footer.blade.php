@@ -8,8 +8,6 @@
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </div>
-
-
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <div class="footer-widget recent-blog">
                     <h4 class="mb-4 text-white letter-spacing text-uppercase">Recents Posts</h4>
@@ -46,10 +44,9 @@
                 </div>
             </div>
         </div>
-
         <div class="row align-items-center mt-5 px-3 bg-black mx-1">
-            <div class="col-lg-4">
-                <p class="text-white mt-3">Gymfit © 2020 , Developed By <a href="https://www.linkedin.com/in/hanan-mohammed-75a28a139/" class="text-color">Hanan Mohamed</a></p>
+            <div class="col-lg-6">
+                <p class="text-white mt-3">Gymfit © 2020, Developed By<a href="https://www.linkedin.com/in/hanan-mohammed-75a28a139/" class="text-color"> Hanan Mohamed</a></p>
             </div>
             <div class="col-lg-6 ml-auto text-right">
                 <ul class="list-inline mb-0 footer-socials">

@@ -7,7 +7,7 @@
     <meta name="description" content="GYm,fitness,business,company,agency,multipurpose,modern,bootstrap4">
     <meta name="author" content="Themefisher.com">
     <title>GymFit|@yield('title')</title>
-
+    <link rel="icon" type="image/jpg" sizes="32x32" href="{{asset_public('front/images/logo.jpg')}}">
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="{{asset_public('front/plugins/bootstrap/css/bootstrap.min.css')}}">
     <!-- Icofont Css -->
@@ -27,7 +27,7 @@
 </head>
 <body>
 @include('front.include.navbar')
-<div class="main-wrapper ">
+<div class="main-wrapper">
 @yield('content')
 @include('front.include.footer')
 </div>
