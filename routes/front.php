@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-Route::get('/front', function()
+Route::get('/', function()
 {
     return view('welcome');
 });
