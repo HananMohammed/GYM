@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{app()->getLocale()}}">
+<html lang="{{app()->getLocale()}}" direction="rtl" dir="rtl" style="direction: rtl">
 <!--begin::Head-->
 <head><base href="">
     <meta charset="utf-8" />
@@ -27,6 +27,25 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @livewireStyles
     <link rel="shortcut icon" href="{{asset_public('admin/media/logos/favicon.ico')}}" />
+    @if(app()->getLocale() == 'ar')
+        <link href="{{asset_public('admin/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/plugins/custom/prismjs/prismjs.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/style.bundle.rtl.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/invoice/invoice-6.rtl.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/error/error-6.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/error/error-5.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/error/error-4.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/error/error-3.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/plugins/custom/tinymce/skins/content/default/content.min.rtl.css')}}" rel="stylesheet" type="text/css" />
+   <style>
+       #kt_header{
+           margin-left: -10%;
+       }
+   </style>
+
+    @endif
     @yield('styles')
 </head>
 <!--end::Head-->
