@@ -39,9 +39,17 @@
         <link href="{{asset_public('admin/css/pages/error/error-4.rtl.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset_public('admin/css/pages/error/error-3.rtl.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{asset_public('admin/plugins/custom/tinymce/skins/content/default/content.min.rtl.css')}}" rel="stylesheet" type="text/css" />
-   <style>
+        <link href="{{asset_public('admin/plugins/custom/tinymce/skins/ui/oxide/content.inline.min.rtl.css')}}" rel="stylesheet" type="text/css" />
+
+        <style>
        #kt_header{
            margin-left: -10%;
+       }
+       #kt_footer{
+           width:112%;
+       }
+       #kt_content{
+           width: 112%;
        }
    </style>
 
@@ -1774,6 +1782,7 @@
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
 @livewireScripts
 <!--end::Page Scripts-->
+@yield('scripts')
 </body>
 <!--end::Body-->
 </html>

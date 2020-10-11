@@ -20,5 +20,8 @@ Route::group(['prefix' => 'dashboard'], function(){
 
     Route::get('/profile','UserProfileController@show' )->name('profile');
     Route::post("/profile-information" , "ProfileInformationController@update")->name('user-profile-information.update');
+    Route::get('sliders/edit','SliderController@edit' )->name('sliders.edit');
+    Route::put('sliders/update','SliderController@update' )->name('sliders.update');
+
 });
 
