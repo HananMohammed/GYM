@@ -15,7 +15,7 @@
                         <!--begin::Breadcrumb-->
                         <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
                             <li class="breadcrumb-item">
-                                <a href="{{route('admin.dashboard')}}" class="text-muted">@lang('dashboards.title')</a>
+                                <a href="{{route('admin.dashboard')}}" class="text-muted">@lang('dashboard.dashboard')</a>
                             </li>
                             <li class="breadcrumb-item">
                                 <a href="javascrpit:;" class="text-muted">@lang('slider.slider-edit')</a>
@@ -68,8 +68,8 @@
                                     @include('admin.homepage.slider.form')
                                 </div>
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary mr-2">@lang('dashboards.submit')</button>
-                                    <a href="{{route('admin.dashboard')}}" class="btn btn-secondary">@lang('dashboards.close')</a>
+                                    <button type="submit" class="btn btn-primary mr-2">@lang('dashboard.submit')</button>
+                                    <a href="{{route('admin.dashboard')}}" class="btn btn-secondary">@lang('dashboard.close')</a>
                                 </div>
                             </form>
                             <!--end::Form-->

@@ -1,6 +1,6 @@
 <?php
 return[
-    'homepage' =>'Homepage',
+    'homepage' =>'Setting',
     'slider'=>'Slider',
 ];
 

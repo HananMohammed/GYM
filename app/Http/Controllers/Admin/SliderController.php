@@ -34,7 +34,8 @@ class SliderController extends Controller
      */
     public function update(SliderRequest $request)
     {
-        $slider= Slider::updateOrCreate(
+        $slider= Slider::first();
+        $slider->update(
              [
                  "title_en" => $request->title_en ,
                  "title_ar" => $request->title_ar ,
@@ -43,7 +44,11 @@ class SliderController extends Controller
 
         if ($request->has('image'))
         {
-            $slider->image()->updateOrCreate([
+            $imageId = $slider->image()->pluck('id')[0] ;
+
+            $this->deleteImage($imageId);
+
+            $slider->image()->update([
                 'image' => $this->upload_image(($request->file('image')))
             ]);
 

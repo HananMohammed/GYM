@@ -1,15 +1,14 @@
 <div class="row align-items-center">
     <div class="row">
         <div class="form-group col-lg-8 m-auto">
-            <label><label class="text-danger">*</label>@lang('slider.slider')</label>
+            <label><label class="text-danger">*</label>@lang('slider.image')</label>
             <div class=" row">
                 <div class="col-lg-12 col-xl-12">
                     <div class="image-input image-input-outline" id="kt_contacts_edit_avatar" style="background-image: url({{asset_public('admin/media/gym_images/il_570xN.1580358345_5585.jpg')}}) ;width:300px;height: 220px;">
-                        <div class="image-input-wrapper"  style="background-image: url({{asset_public('admin/media/gym_images/images.png')}}); width:300px;height: 220px;"></div>
+                        <div class="image-input-wrapper"  style="background-image: @if(!empty($slider))url({{asset_public('storage/images/'.$slider->image()->pluck('image')[0])}}) @else url({{asset_public('admin/media/gym_images/images.png')}})@endif; width:300px;height: 220px;"></div>
                         <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Change avatar">
                             <i class="fa fa-pen icon-sm text-muted"></i>
                             <input type="file" name="image">
-{{--                            <input type="file" hidden name="image">--}}
                         </label>
                         <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="" data-original-title="Cancel avatar">
                             <i class="ki ki-bold-close icon-xs text-muted"></i>

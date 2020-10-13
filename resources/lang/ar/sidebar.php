@@ -1,5 +1,5 @@
 <?php
 return [
-    'homepage' => 'الرئيسيه',
+    'homepage' => 'الاعدادات',
     'slider' => 'السلايد',
 ];
