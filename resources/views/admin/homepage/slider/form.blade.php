@@ -23,7 +23,7 @@
         <div class="col-lg-6 col-sm-12">
             <div class="form-group">
                 <label for="content_en">@lang('slider.title_en')<label class="text-danger">*</label></label>
-                <textarea name="title_en" id="content_en" class="form-control "  placeholder="@lang('slider.enter-english-content')" >
+                <textarea name="title_en" id="content_en" class="form-control summernote"  placeholder="@lang('slider.enter-english-content')" >
              {{old('title_en')??$slider->title_en}}
             </textarea>
                 <div>{{ $errors->first('title_en') }}</div>
@@ -32,7 +32,7 @@
         <div class="col-lg-6 col-sm-12">
             <div class="form-group">
                 <label for="content_ar">@lang('slider.title_ar')<label class="text-danger">*</label></label>
-                <textarea name="title_ar" id="content_ar" class="form-control"  placeholder="@lang('slider.enter-arabic-content')" >
+                <textarea name="title_ar" id="content_ar" class="form-control summernote"  placeholder="@lang('slider.enter-arabic-content')" >
              {{old('title_ar')??$slider->title_ar}}
             </textarea>
                 <div>{{ $errors->first('title_ar') }}</div>
@@ -68,41 +68,65 @@ jQuery(document).ready(function() {
     KTContactsEdit.init();
 });
 </script>
-<script>
-/*editor*/
-// Class definition
-var KTCkeditor1 = function () {
-// Private functions
-    var demos1 = function () {
-        ClassicEditor.create( document.querySelector( '#content_ar' ) )
-            .then( editor => {
-                console.log( editor );
-            } )
-            .catch( error => {
-                console.error( error );
-            } );
-    }
-    var demos2 = function () {
-        ClassicEditor.create( document.querySelector( '#content_en' ) )
-            .then( editor => {
-                console.log( editor );
-            } )
-            .catch( error => {
-                console.error( error );
-            } );
-    }
+    <script>
+        // Class definition
 
-    return {
-        // public functions
-        init: function() {
-            demos1();
-            demos2();
-        }
-    };
-}();
-// Initialization
-jQuery(document).ready(function() {
-    KTCkeditor1.init();
-});
-</script>
+        var KTSummernoteDemo = function () {
+            // Private functions
+            var demos = function () {
+                $('.summernote').summernote({
+                    height: 150
+                });
+            }
+
+            return {
+                // public functions
+                init: function() {
+                    demos();
+                }
+            };
+        }();
+
+        // Initialization
+        jQuery(document).ready(function() {
+            KTSummernoteDemo.init();
+        });
+    </script>
+{{--<script>--}}
+{{--/*editor*/--}}
+{{--// Class definition--}}
+{{--var KTCkeditor1 = function () {--}}
+{{--// Private functions--}}
+{{--    var demos1 = function () {--}}
+{{--        ClassicEditor.create( document.querySelector( '#content_ar' ) )--}}
+{{--            .then( editor => {--}}
+{{--                console.log( editor );--}}
+{{--            } )--}}
+{{--            .catch( error => {--}}
+{{--                console.error( error );--}}
+{{--            } );--}}
+{{--    }--}}
+{{--    var demos2 = function () {--}}
+{{--        ClassicEditor.create( document.querySelector( '#content_en' ) )--}}
+{{--            .then( editor => {--}}
+{{--                console.log( editor );--}}
+{{--            } )--}}
+{{--            .catch( error => {--}}
+{{--                console.error( error );--}}
+{{--            } );--}}
+{{--    }--}}
+
+{{--    return {--}}
+{{--        // public functions--}}
+{{--        init: function() {--}}
+{{--            demos1();--}}
+{{--            demos2();--}}
+{{--        }--}}
+{{--    };--}}
+{{--}();--}}
+{{--// Initialization--}}
+{{--jQuery(document).ready(function() {--}}
+{{--    KTCkeditor1.init();--}}
+{{--});--}}
+{{--</script>--}}
 @endsection

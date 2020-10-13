@@ -23,7 +23,10 @@
     <link rel="stylesheet" href="{{asset_public('front/plugins/slick-carousel/slick/slick-theme.css')}}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{asset_public('front/css/style.css')}}">
-@yield('styles')
+    @if(app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
+    @endif
+        @yield('styles')
 </head>
 <body>
 @include('front.include.navbar')

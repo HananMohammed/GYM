@@ -11,6 +11,15 @@ if (! function_exists('asset_public')) {
         return env('FRONT_PUBLIC', 'http://localhost/GYM/public/') . $path;
     }
 }
+if (! function_exists('image')) {
+    /**
+     * Full asset public path
+     */
+    function image($path = null)
+    {
+        return env('FRONT_PUBLIC_ST ORAGE', 'http://localhost/GYM/public/storage/images/') . $path;
+    }
+}
 if (! function_exists('upload_images')){
 
     /**
