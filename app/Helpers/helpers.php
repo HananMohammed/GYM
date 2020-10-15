@@ -11,31 +11,15 @@ if (! function_exists('asset_public')) {
         return env('FRONT_PUBLIC', 'http://localhost/GYM/public/') . $path;
     }
 }
-
-if (! function_exists('upload_image'))
-{
+if (! function_exists('image')) {
     /**
-     * @param $fileRequest
-     * @return string
-     * @throws \WebPConvert\Convert\Exceptions\ConversionFailedException
+     * Full asset public path
      */
-    function upload_image($fileRequest)
-     {
-         $imageName = 'image'. time() . '.' . $fileRequest->getClientOriginalExtension();
-
-         $fileRequest->move(public_path('image'), $imageName);
-
-         $source =public_path('image/'.$imageName) ;
-
-         $output = $source.'.webp';
-
-         WebPConvert::convert( $source , $output) ;
-
-         return $imageName ;
-     }
+    function image($path = null)
+    {
+        return env('FRONT_PUBLIC_ST ORAGE', 'http://localhost/GYM/public/storage/images/') . $path;
+    }
 }
-
-
 if (! function_exists('upload_images')){
 
     /**
@@ -61,40 +45,6 @@ if (! function_exists('upload_images')){
         }
 
         return  json_encode($totalImages) ;
-    }
-}
-
-if (! function_exists('updateMultiImage')){
-
-    /**
-     * @param $files
-     * @param $oldFiles
-     * @return array
-     * @throws \WebPConvert\Convert\Exceptions\ConversionFailedException
-     */
-    function updateMultiImage($files ,$oldFiles){
-
-        $totalFiles = [];
-        $files = collect($files)->values() ;
-        for($i=0 ; $i<count($files) ; $i++)
-        {
-            $imageName = 'image'. time() . $i . '.' . $files[$i]->getClientOriginalExtension();
-
-            $files[$i]->move(public_path('image'), $imageName);
-
-            $source =public_path('image/'.$imageName) ;
-
-            $output = $source.'.webp';
-
-            WebPConvert::convert( $source , $output) ;
-
-            $totalFiles[] = $imageName ;
-        }
-        empty($oldFiles) ?
-            $totalFiles = json_encode($totalFiles) :
-            $totalFiles= json_encode(array_merge(json_decode($oldFiles, true),$totalFiles ), true) ;
-
-        return  $totalFiles ;
     }
 }
 

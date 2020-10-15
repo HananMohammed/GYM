@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{app()->getLocale()}}">
+<html lang="{{app()->getLocale()}}" direction="rtl" dir="rtl" style="direction: rtl">
 <!--begin::Head-->
 <head><base href="">
     <meta charset="utf-8" />
@@ -27,6 +27,33 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @livewireStyles
     <link rel="shortcut icon" href="{{asset_public('admin/media/logos/favicon.ico')}}" />
+    @if(app()->getLocale() == 'ar')
+        <link href="{{asset_public('admin/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/plugins/custom/prismjs/prismjs.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/style.bundle.rtl.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/invoice/invoice-6.rtl.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/error/error-6.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/error/error-5.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/error/error-4.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/css/pages/error/error-3.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/plugins/custom/tinymce/skins/content/default/content.min.rtl.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset_public('admin/plugins/custom/tinymce/skins/ui/oxide/content.inline.min.rtl.css')}}" rel="stylesheet" type="text/css" />
+
+        <style>
+       #kt_header{
+           margin-left: -10%;
+       }
+       #kt_footer{
+           width:112%;
+       }
+       #kt_content{
+           width: 112%;
+       }
+   </style>
+
+    @endif
     @yield('styles')
 </head>
 <!--end::Head-->
@@ -204,7 +231,11 @@
                             <!--begin::Toggle-->
                             <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                                 <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
+                                    @if(app()->getLocale() == 'ar')
                                     <img class="h-20px w-20px rounded-sm" src="{{asset_public('admin/media/svg/flags/226-united-states.svg')}}" alt="" />
+                                    @else
+                                        <img class="h-20px w-20px rounded-sm" src="{{asset_public('admin/media/svg/flags/Flag_of_Egypt.svg')}}" alt="" />
+                                    @endif
                                 </div>
                             </div>
                             <!--end::Toggle-->
@@ -263,14 +294,12 @@
                     <!--begin::Copyright-->
                     <div class="text-dark order-2 order-md-1">
                         <span class="text-muted font-weight-bold mr-2">2020©</span>
-                        <a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">Keenthemes</a>
+                        <a href="http://keenthemes.com/metronic" target="_blank" class="text-dark-75 text-hover-primary">Hanan Mohamed</a>
                     </div>
                     <!--end::Copyright-->
                     <!--begin::Nav-->
                     <div class="nav nav-dark">
-                        <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-5">About</a>
-                        <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-5">Team</a>
-                        <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-0">Contact</a>
+                        <a href="https://www.linkedin.com/in/hanan-mohammed-75a28a139/" target="_blank" class="nav-link pl-0 pr-0">Contact</a>
                     </div>
                     <!--end::Nav-->
                 </div>
@@ -1753,8 +1782,11 @@
 <script src="{{asset_public('admin/js/pages/widgets.js')}}"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
+<script src="{{asset_public('admin/js/pages/features/miscellaneous/sweetalert2.js')}}"></script>
+
 @livewireScripts
 <!--end::Page Scripts-->
+@yield('scripts')
 </body>
 <!--end::Body-->
 </html>
