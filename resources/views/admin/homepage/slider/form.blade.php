@@ -92,41 +92,4 @@ jQuery(document).ready(function() {
             KTSummernoteDemo.init();
         });
     </script>
-{{--<script>--}}
-{{--/*editor*/--}}
-{{--// Class definition--}}
-{{--var KTCkeditor1 = function () {--}}
-{{--// Private functions--}}
-{{--    var demos1 = function () {--}}
-{{--        ClassicEditor.create( document.querySelector( '#content_ar' ) )--}}
-{{--            .then( editor => {--}}
-{{--                console.log( editor );--}}
-{{--            } )--}}
-{{--            .catch( error => {--}}
-{{--                console.error( error );--}}
-{{--            } );--}}
-{{--    }--}}
-{{--    var demos2 = function () {--}}
-{{--        ClassicEditor.create( document.querySelector( '#content_en' ) )--}}
-{{--            .then( editor => {--}}
-{{--                console.log( editor );--}}
-{{--            } )--}}
-{{--            .catch( error => {--}}
-{{--                console.error( error );--}}
-{{--            } );--}}
-{{--    }--}}
-
-{{--    return {--}}
-{{--        // public functions--}}
-{{--        init: function() {--}}
-{{--            demos1();--}}
-{{--            demos2();--}}
-{{--        }--}}
-{{--    };--}}
-{{--}();--}}
-{{--// Initialization--}}
-{{--jQuery(document).ready(function() {--}}
-{{--    KTCkeditor1.init();--}}
-{{--});--}}
-{{--</script>--}}
 @endsection
