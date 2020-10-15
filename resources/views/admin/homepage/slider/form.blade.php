@@ -64,32 +64,34 @@
             };
         }();
 
+
         jQuery(document).ready(function() {
             KTContactsEdit.init();
         });
     </script>
-    <script>
-        // Class definition
 
-        var KTSummernoteDemo = function () {
-            // Private functions
-            var demos = function () {
-                $('.summernote').summernote({
-                    height: 150
-                });
+<script>
+    // Class definition
+
+    var KTSummernoteDemo = function () {
+        // Private functions
+        var demos = function () {
+            $('.summernote').summernote({
+                height: 150
+            });
+        }
+
+        return {
+            // public functions
+            init: function() {
+                demos();
             }
+        };
+    }();
 
-            return {
-                // public functions
-                init: function() {
-                    demos();
-                }
-            };
-        }();
-
-        // Initialization
-        jQuery(document).ready(function() {
-            KTSummernoteDemo.init();
-        });
-    </script>
+    // Initialization
+    jQuery(document).ready(function() {
+        KTSummernoteDemo.init();
+    });
+</script>
 @endsection

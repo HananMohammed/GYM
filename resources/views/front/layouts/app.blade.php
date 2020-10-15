@@ -23,7 +23,10 @@
     <link rel="stylesheet" href="{{asset_public('front/plugins/slick-carousel/slick/slick-theme.css')}}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{asset_public('front/css/style.css')}}">
-@yield('styles')
+    @if(app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
+    @endif
+        @yield('styles')
 </head>
 <body>
 @include('front.include.navbar')
@@ -35,21 +38,21 @@
     Essential Scripts
     =====================================-->
 <!-- Main jQuery -->
-<script src="{{asset_public('plugins/jquery/jquery.js')}}"></script>
+<script src="{{asset_public('front/plugins/jquery/jquery.js')}}"></script>
 <!-- Bootstrap 4.3.1 -->
-<script src="{{asset_public('plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset_public('front/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- Slick Slider -->
-<script src="{{asset_public('plugins/slick-carousel/slick/slick.min.js')}}"></script>
+<script src="{{asset_public('front/plugins/slick-carousel/slick/slick.min.js')}}"></script>
 <!--  Magnific Popup-->
-<script src="{{asset_public('plugins/magnific-popup/dist/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset_public('front/plugins/magnific-popup/dist/jquery.magnific-popup.min.js')}}"></script>
 <!-- Form Validator -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
-<script src="{{asset_public('plugins/google-map/gmap.js')}}"></script>
+<script src="{{asset_public('front/plugins/google-map/gmap.js')}}"></script>
 
-<script src="{{asset_public('js/script.js')}}"></script>
+<script src="{{asset_public('front/js/script.js')}}"></script>
 @yield('scripts')
 </body>
 

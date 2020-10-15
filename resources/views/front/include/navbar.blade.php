@@ -2,7 +2,7 @@
 <!-- Header Start -->
 <nav class="navbar navbar-expand-lg navigation fixed-top" id="navbar">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="{{route('front.homepage')}}">
             <h2 class="text-white text-capitalize"></i>Gym<span class="text-color">Fit</span></h2>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsid"
@@ -36,6 +36,17 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
+            <div class="my-md-0 ml-lg-4 mt-4 mt-lg-0 ml-auto text-lg-right mb-3 mb-lg-0">
+                @if(app()->getLocale() =='ar')
+                    <a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">
+                        <h3 class="text-color mb-0">EN</h3>
+                    </a>
+                @else
+                    <a href="{{ LaravelLocalization::getLocalizedURL('ar', null, [], true) }}">
+                        <h3 class="text-color mb-0">AR</h3>
+                    </a>
+                @endif
+            </div>
             <div class="my-md-0 ml-lg-4 mt-4 mt-lg-0 ml-auto text-lg-right mb-3 mb-lg-0">
                 <a href="tel:+23-345-67890">
                     <h3 class="text-color mb-0"><i class="ti-mobile mr-2"></i>+23-563-5688</h3>
