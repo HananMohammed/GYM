@@ -16,6 +16,7 @@
                         <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="remove" data-toggle="tooltip" title="" data-original-title="Remove avatar">
                             <i class="ki ki-bold-close icon-xs text-muted"></i>
                         </span>
+                        <div>{{ $errors->first('image') }}</div>
                     </div>
                 </div>
             </div>
@@ -94,4 +95,7 @@
         KTSummernoteDemo.init();
     });
 </script>
+@if(session()->has('success'))
+    <script>Swal.fire("Good Job", "{{session()->get('success')}}", "success");</script>
+@endif
 @endsection
