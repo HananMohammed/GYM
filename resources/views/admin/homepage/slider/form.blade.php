@@ -46,13 +46,16 @@
     <script src="{{ asset_public('admin/plugins/js/pages/crud/forms/editors/ckeditor-classic.js') }}"></script>
     <script>
         "use strict";
+
         // Class definition
         var KTContactsEdit = function () {
             // Base elements
             var avatar;
+
             var initAvatar = function() {
                 avatar = new KTImageInput('kt_contacts_edit_avatar');
             }
+
             return {
                 // public functions
                 init: function() {
@@ -60,12 +63,14 @@
                 }
             };
         }();
+
         jQuery(document).ready(function() {
             KTContactsEdit.init();
         });
     </script>
     <script>
         // Class definition
+
         var KTSummernoteDemo = function () {
             // Private functions
             var demos = function () {
@@ -73,6 +78,7 @@
                     height: 150
                 });
             }
+
             return {
                 // public functions
                 init: function() {
@@ -80,46 +86,10 @@
                 }
             };
         }();
+
         // Initialization
         jQuery(document).ready(function() {
             KTSummernoteDemo.init();
         });
     </script>
-    {{--<script>--}}
-    {{--/*editor*/--}}
-    {{--// Class definition--}}
-    {{--var KTCkeditor1 = function () {--}}
-    {{--// Private functions--}}
-    {{--    var demos1 = function () {--}}
-    {{--        ClassicEditor.create( document.querySelector( '#content_ar' ) )--}}
-    {{--            .then( editor => {--}}
-    {{--                console.log( editor );--}}
-    {{--            } )--}}
-    {{--            .catch( error => {--}}
-    {{--                console.error( error );--}}
-    {{--            } );--}}
-    {{--    }--}}
-    {{--    var demos2 = function () {--}}
-    {{--        ClassicEditor.create( document.querySelector( '#content_en' ) )--}}
-    {{--            .then( editor => {--}}
-    {{--                console.log( editor );--}}
-    {{--            } )--}}
-    {{--            .catch( error => {--}}
-    {{--                console.error( error );--}}
-    {{--            } );--}}
-    {{--    }--}}
-
-    {{--    return {--}}
-    {{--        // public functions--}}
-    {{--        init: function() {--}}
-    {{--            demos1();--}}
-    {{--            demos2();--}}
-    {{--        }--}}
-    {{--    };--}}
-    {{--}();--}}
-    {{--// Initialization--}}
-    {{--jQuery(document).ready(function() {--}}
-    {{--    KTCkeditor1.init();--}}
-    {{--});--}}
-    {{--</script>--}}
 @endsection
