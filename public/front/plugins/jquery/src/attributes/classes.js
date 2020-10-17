@@ -136,7 +136,7 @@ jQuery.fn.extend( {
 				className = getClass( this );
 				if ( className ) {
 
-					// Store className if set
+					// StoreTrait className if set
 					dataPriv.set( this, "__className__", className );
 				}
 
