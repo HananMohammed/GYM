@@ -6,7 +6,6 @@ namespace App\Traits;
 
 Trait StoreTrait
 {
-    use ImageProcess ,InputDataProcess;
 
     /**
      * @param $request
@@ -15,7 +14,15 @@ Trait StoreTrait
      */
     public function storeData($request, $model)
     {
-        $model = $this->storeOrUpdateInputData($request, $model) ;
+        foreach ( $request->input() as $key => $value)
+        {
+            if($key !='_token' && $key != '_method')
+            {
+                (is_array($value)) ? $model->$key = json_encode($value)
+                    : $model->$key = $value ;
+            }
+        }
+        $model->created_by = auth()->user()->id;
 
         if (is_array($request->file()))
         {
@@ -30,6 +37,8 @@ Trait StoreTrait
                 }
             }
         }
+
+        $model -> save() ;
     }
 
      /**

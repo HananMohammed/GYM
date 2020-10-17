@@ -48,7 +48,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="card p-4 text-center border-0 rounded-0">
-                    <i class="icofont-bill-alt text-lg text-color"></i>
+
                     <h3 class="mt-3">Online payment</h3>
                     <p class="mt-3 mb-4">Vestibulum sit amet blan augue, sit amet vehicula mi. Aliquam vitae varius.</p>
                 </div>

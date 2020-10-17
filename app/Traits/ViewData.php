@@ -5,6 +5,7 @@ namespace App\Traits;
 
 
 use App\Models\Admin\About;
+use App\Models\Admin\IconFont;
 use App\Models\Admin\Slider;
 
 class ViewData

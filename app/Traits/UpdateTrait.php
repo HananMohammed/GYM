@@ -6,8 +6,6 @@ namespace App\Traits;
 
 trait UpdateTrait
 {
-    use InputDataProcess ,ImageProcess;
-
     /**
      * @param $request
      * @param $updateModel
@@ -15,7 +13,18 @@ trait UpdateTrait
      */
     public function updateData($request, $updateModel)
     {
-        $model = $this->storeOrUpdateInputData($request , $updateModel) ;
+        foreach ( $request->input() as $key => $value)
+        {
+            if($key !='_token' && $key != '_method')
+            {
+                (is_array($value)) ? $updateModel->$key = json_encode($value)
+                    : $updateModel->$key = $value ;
+            }
+        }
+
+        $updateModel->created_by = auth()->user()->id;
+
+        $model = $updateModel->save() ;
 
         if (is_array($request->file()))
         {
