@@ -28,7 +28,7 @@ var KTQuilDemos = function() {
             theme: 'snow'
         });
 
-        // Store accumulated changes
+        // StoreTrait accumulated changes
         var change = new Delta();
         quill.on('text-change', function(delta) {
             change = change.compose(delta);

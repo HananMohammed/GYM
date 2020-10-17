@@ -14,10 +14,9 @@ class SliderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  Slider  $slider
      * @return view
      */
-    public function edit(Slider $slider)
+    public function edit()
     {
         $slider = Slider::first();
         if($slider === null)
