@@ -26,10 +26,9 @@ class AboutRequest extends FormRequest
         return [
              'title_en' => 'required|string',
              'title_ar' => 'required|string',
-             'year' => 'required|string',
+             'year' => 'required|numeric|digits:4|integer|min:1900',
              'text_en' => 'required|string',
              'text_ar' => 'required|string',
-             'image' => 'required',
              'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10000'
         ];
     }

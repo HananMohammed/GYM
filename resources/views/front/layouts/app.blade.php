@@ -21,11 +21,13 @@
     <!-- Owl Carousel CSS -->
     <link rel="stylesheet" href="{{asset_public('front/plugins/slick-carousel/slick/slick.css')}}">
     <link rel="stylesheet" href="{{asset_public('front/plugins/slick-carousel/slick/slick-theme.css')}}">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="{{asset_public('front/css/style.css')}}">
     @if(app()->getLocale() == 'ar')
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
         <link rel="stylesheet" href="//cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">
     @endif
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{{asset_public('front/css/style.css')}}">
+
         @yield('styles')
 </head>
 <body>
@@ -51,7 +53,6 @@
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
 <script src="{{asset_public('front/plugins/google-map/gmap.js')}}"></script>
-
 <script src="{{asset_public('front/js/script.js')}}"></script>
 @yield('scripts')
 </body>
