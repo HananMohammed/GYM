@@ -30,6 +30,12 @@ class AppServiceProvider extends ServiceProvider
 
              $view->with('data' , $data);
         });
+        View::composer('front.about.*', function ($view){
+
+            $data =  ViewData::aboutData();
+
+            $view->with('data' , $data);
+        });
     }
 
 }

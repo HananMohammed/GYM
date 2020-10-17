@@ -19,9 +19,7 @@
         <div class="col-lg-4 col-sm-12">
             <div class="form-group">
                 <label for="year">@lang('about.year')<label class="text-danger">*</label></label>
-                <textarea type="text"  name="year"  class="form-control summernote" id="year"  placeholder="@lang('about.enter-establish-year')" >
-                    {{old('year')??$about->year}}
-                </textarea>
+                <input type="text"  name="year"  value=" {{old('year')??$about->year}}" class="form-control " id="year"  placeholder="@lang('about.enter-establish-year')" >
             </div>
         </div>
         <div class="col-lg-12 col-sm-12">

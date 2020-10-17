@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
 Route::get('/', function()
 {
     return view('front.index');
 })->name('homepage');
 
+Route::get('/about' , function (){
+    return view('front.about.index');
+})->name('about');
 
