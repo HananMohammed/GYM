@@ -51,6 +51,9 @@
        #kt_content{
            width: 112%;
        }
+        .subheader-solid{
+            width: 112%;
+        }
    </style>
 
     @endif
@@ -1780,6 +1783,9 @@
 <!--end::Page Vendors-->
 <!--begin::Page Scripts(used by this page)-->
 <script src="{{asset_public('admin/js/pages/widgets.js')}}"></script>
+<script>
+    const currentLocation = window.location.href;
+</script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.js" defer></script>
 <script src="{{asset_public('admin/js/pages/features/miscellaneous/sweetalert2.js')}}"></script>
