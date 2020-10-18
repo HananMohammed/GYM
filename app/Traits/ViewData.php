@@ -7,6 +7,7 @@ namespace App\Traits;
 use App\Models\Admin\About;
 use App\Models\Admin\IconFont;
 use App\Models\Admin\Slider;
+use App\Models\Admin\WhyChooseUs;
 
 class ViewData
 {
@@ -29,6 +30,7 @@ class ViewData
     {
         $data = [
             "about" => About::first(),
+            "cards" => WhyChooseUs::all(),
         ];
 
         return $data ;

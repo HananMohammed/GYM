@@ -81,7 +81,7 @@
                                         @foreach($cards as $card)
                                             <tr>
                                                 <td>{{$card->id}}</td>
-                                                <td>{{$card->icon }}</td>
+                                                <td>{{$card->icon()->pluck('name')[0]}}</td>
                                                 <td>{{$card->$title}}</td>
                                                 <td>{{$card->user->name}}</td>
                                                 <td>{{ $card->created_at }}</td>
@@ -191,7 +191,7 @@
                     },
                     {
                         targets: 2,
-                        title:'Offer Status' ,
+                        title:'Title' ,
                         width: '75px',
                         render: function(data, type, full, meta) {
                             var status = {
