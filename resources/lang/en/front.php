@@ -5,6 +5,8 @@ return[
     "what-we-are" =>"WHAT WE ARE" ,
     'services'=>'Services' ,
     'est'=>'Est:' ,
-    'why-choose-us' =>'Why Choose Us'
+    'why-choose-us' =>'Why Choose Us',
+    'our-gallery' =>'Our gallery',
+    'offer'=>'We offer more than 35 group exercis, aerobic classes each week.'
 
 ];

@@ -20,6 +20,7 @@ class ViewData
         $data = [
             "slider" => Slider::all(),
             "gallary" =>Gallary::all(),
+            "cards" => WhyChooseUs::all(),
 
         ];
 

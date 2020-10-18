@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('front.index', function ($view){
+        View::composer('front.homepage.*', function ($view){
 
              $data =  ViewData::HomepageData();
 
