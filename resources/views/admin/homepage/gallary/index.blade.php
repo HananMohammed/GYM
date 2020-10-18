@@ -1,6 +1,6 @@
 @extends('admin.layouts.app')
 
-@section('title', 'Cards')
+@section('title', 'gallary')
 
 @section('content')
     <!--begin::Subheader-->
@@ -14,7 +14,7 @@
                 <!--begin::Page Heading-->
                 <div class="d-flex align-items-baseline flex-wrap mr-5">
                     <!--begin::Page Title-->
-                    <h5 class="text-dark font-weight-bold my-1 mr-5">@lang('cards.cards')</h5>
+                    <h5 class="text-dark font-weight-bold my-1 mr-5">@lang('gallary.gallary')</h5>
                     <!--end::Page Title-->
                     <!--begin::Breadcrumb-->
                     <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
@@ -22,7 +22,7 @@
                             <a href="{{route('admin.dashboard')}}" class="text-muted">@lang('dashboard.dashboard')</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{route('admin.cards.index')}}" class="text-muted">@lang('cards.cards')</a>
+                            <a href="{{route('admin.gallaries.index')}}" class="text-muted">@lang('gallary.gallary')</a>
                         </li>
                     </ul>
                     <!--end::Breadcrumb-->
@@ -41,11 +41,11 @@
             <div class="card card-custom gutter-b" style="width: 100%;">
                 <div class="card-header flex-wrap py-3">
                     <div class="card-title">
-                        <h3 class="card-label">@lang('cards.cards-table')</h3>
+                        <h3 class="card-label">@lang('gallary.gallary-table')</h3>
                     </div>
                     <div class="card-toolbar">
                         <!--begin::Button-->
-                        <a href="{{ route('admin.cards.create') }}" class="btn btn-primary font-weight-bolder d-flex">
+                        <a href="javascript:void(0);" data-toggle="modal" data-target="#gallaryModal" class="btn btn-primary font-weight-bolder d-flex">
                     <span class="svg-icon svg-icon-md">
                         <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -56,10 +56,29 @@
                             </g>
                         </svg>
                         <!--end::Svg Icon-->
-                    </span>@lang('cards.card-new')</a>
+                    </span>@lang('gallary.gallary-new')</a>
                         <!--end::Button-->
                     </div>
                 </div>
+                @include('admin.homepage.gallary.form')
+                @if(!empty($errors->any()))
+                    <div class="alert alert-custom alert-light-danger fade show mb-5" role="alert">
+                        <div class="alert-icon"><i class="flaticon-warning"></i></div>
+                        <div class="alert-text">
+                            <ol>
+                                @if($errors->any())
+                                    {!! implode('',$errors->all('<li>:message</li>')) !!}
+                                @endif
+                            </ol>
+                        </div>
+                        <div class="alert-close">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true"><i class="ki ki-close"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                @endif
+
                 <div class="card-body">
                     <!--begin: Datatable-->
                     <div id="kt_datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
@@ -69,23 +88,23 @@
                                     <thead>
                                     <tr role="row">
                                         <th>@lang('dashboard.id')</th>
-                                        <th>@lang('cards.icon')</th>
-                                        <th>@lang('dashboard.title')</th>
+                                        <th>@lang('gallary.name')</th>
+                                        <th>@lang('gallary.image')</th>
                                         <th>@lang('dashboard.created-by')</th>
                                         <th>@lang('dashboard.created-at')</th>
                                         <th>@lang('dashboard.actions')</th>
                                     </tr>
                                     </thead>
-                                    @if(count($cards)>0)
+                                    @if(count($gallaries)>0)
                                         <tbody>
-                                        @foreach($cards as $card)
+                                        @foreach($gallaries as $gallary)
                                             <tr>
-                                                <td>{{$card->id}}</td>
-                                                <td>{{$card->icon()->pluck('name')[0]}}</td>
-                                                <td>{{$card->$title}}</td>
-                                                <td>{{$card->user->name}}</td>
-                                                <td>{{ $card->created_at }}</td>
-                                                <td nowrap="nowrap">{{ $card->id }}</td>
+                                                <td>{{$gallary->id}}</td>
+                                                <td>{{$gallary->name}}</td>
+                                                <td><img src="{{asset_public('storage/images/'.$gallary->image()->pluck('image')[0])}}" width="80" height="70" style="border-radius: 5%;"></td>
+                                                <td>{{$gallary->user->name}}</td>
+                                                <td>{{ $gallary->created_at }}</td>
+                                                <td nowrap="nowrap">{{ $gallary->id }}</td>
                                             </tr>
                                         @endforeach
                                         </tbody>
@@ -105,6 +124,16 @@
 @endsection
 @section('scripts')
     <script src="{{ asset_public('admin/plugins/custom/datatables/datatables.bundle.js') }}"></script>
+    <!--Drop Zone-->
+    <script>
+        $("#upload-photo").on('change' , function () {
+            var image = document.getElementById('outputImage');
+            $(".dropzone-msg").remove()
+            image.src = URL.createObjectURL(event.target.files[0]);
+            $("#outputImage").css('display','block')
+        })
+    </script>
+
     <script type="text/javascript">
         $( document ).ready(function() {
 
@@ -157,21 +186,8 @@
                         orderable: false,
                         width: '125px',
                         render: function(data, type, full, meta) {
-                            // href="`+currentLocation+`/${data}/edit"
                             return `
-                    <a href= "${currentLocation}/${data}/edit" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details">
-                    <span class="svg-icon svg-icon-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <rect x="0" y="0" width="24" height="24"></rect>
-                            <path d="M8,17.9148182 L8,5.96685884 C8,5.56391781 8.16211443,5.17792052 8.44982609,4.89581508 L10.965708,2.42895648 C11.5426798,1.86322723 12.4640974,1.85620921 13.0496196,2.41308426 L15.5337377,4.77566479 C15.8314604,5.0588212 16,5.45170806 16,5.86258077 L16,17.9148182 C16,18.7432453 15.3284271,19.4148182 14.5,19.4148182 L9.5,19.4148182 C8.67157288,19.4148182 8,18.7432453 8,17.9148182 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000000, 10.707409) rotate(-135.000000) translate(-12.000000, -10.707409) "></path>
-                            <rect fill="#000000" opacity="0.3" x="5" y="20" width="15" height="2" rx="1"></rect>
-                        </g>
-                    </svg>
-                </span>
-            </a>
-
-            <a href="${currentLocation}/offers/${data}"class="btn btn-sm btn-clean btn-icon" title="Delete" onclick="event.preventDefault();
+            <a href="${currentLocation}/gallaries/${data}"class="btn btn-sm btn-clean btn-icon" title="Delete" onclick="event.preventDefault();
                         document.getElementById('delete-operator-form-${data}').submit();">
                 <span class="svg-icon svg-icon-md">
                     <svg class="delete" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -191,7 +207,7 @@
                     },
                     {
                         targets: 2,
-                        title:'Title' ,
+                        title:'{{__('gallary.image')}}' ,
                         width: '75px',
                         render: function(data, type, full, meta) {
                             var status = {

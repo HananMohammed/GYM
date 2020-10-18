@@ -3,6 +3,7 @@ return [
     'homepage' => 'الاعدادات',
     'slider' => 'السلايد',
     'about' =>'نحن' ,
-    'cards' =>'الكروت'
+    'cards' =>'الكروت' ,
+    'gallary' =>'الصور'
 
 ];

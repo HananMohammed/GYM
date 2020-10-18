@@ -41,27 +41,29 @@ trait ImageProcess
 
         return $imageName ;
     }
+
+
     /**
-     * @param $id
+     * @param $modelRecord
      */
-    public function deleteOldImage($id)
+    public function deleteImage($modelRecord)
     {
-        $image = Image::where('imageable_id' , $id )->get();
+        $image = $modelRecord->image()->pluck('image')[0];
+
+        $id = $modelRecord->image()->pluck('id')[0];
 
         if (isset($image))
-            $this->oldImageToDelete($image);
+        {
+            $image_path =storage_path('app/public/images').'/'.$image;
 
-    }
+            $image_path_webp = $image_path.'.webp';
 
+            File::delete([$image_path ,$image_path_webp]);
+        }
 
-    public function oldImageToDelete($image){
+        Image::find($id)->delete();
 
-        $old_image_path =storage_path('app/public/images').'/'.$image->image;
-
-        $old_image_path_webp = $old_image_path.'.webp';
-
-        File::delete([$old_image_path ,$old_image_path_webp]);
-
+        $modelRecord->delete();
     }
 
 }

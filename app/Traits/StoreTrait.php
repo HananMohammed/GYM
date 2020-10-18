@@ -24,21 +24,25 @@ Trait StoreTrait
         }
         $model->created_by = auth()->user()->id;
 
+        $model -> save() ;
+
+        //After Save basic Table Take Id To Morph with image Table if exist
         if (is_array($request->file()))
         {
             foreach ($request->file() as $key =>$value)
             {
                 if (is_array($value)){
                     $imagesName = $this->upload_multi_image($value) ;
+
                     $this->storeImage($model, $imagesName, $key);
                 }else{
                     $imageName = $this->upload_image($value) ;
+
                     $this->storeImage($model, $imageName, $key);
                 }
             }
         }
 
-        $model -> save() ;
     }
 
      /**
@@ -47,7 +51,6 @@ Trait StoreTrait
      * @param $key
      */
     public function storeImage($model, $values , $key){
-
         if (is_array($values)){
              foreach ($values as $value){
               $model->image()->create([

@@ -25,6 +25,7 @@ Route::group(['prefix' => 'dashboard'], function(){
     Route::get('abouts/edit','AboutController@edit' )->name('about.edit');
     Route::put('abouts/update','AboutController@update' )->name('about.update');
     Route::resource('cards' ,'CardController');
+    Route::resource('gallaries' ,'GallaryController');
 
 });
 
