@@ -5,6 +5,7 @@ return[
     "what-we-are" =>" من نكون" ,
     'services'=>'الخدمات' ,
     'est'=>'انشأ:' ,
+    'why-choose-us' =>'لماذا تختارنا'
 
 
 ];

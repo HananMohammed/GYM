@@ -5,5 +5,6 @@ return[
     "what-we-are" =>"WHAT WE ARE" ,
     'services'=>'Services' ,
     'est'=>'Est:' ,
+    'why-choose-us' =>'Why Choose Us'
 
 ];
