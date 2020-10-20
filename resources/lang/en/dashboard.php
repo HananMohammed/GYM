@@ -16,6 +16,7 @@ return[
     'title' =>'Title' ,
     'created-by' =>'Created By' ,
     'created-at' =>'Created At' ,
-    'actions' =>'Actions'
+    'actions' =>'Actions',
+    'skills-edit'=>'Edit Skills'
 ];
 

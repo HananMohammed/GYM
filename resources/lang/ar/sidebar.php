@@ -4,6 +4,7 @@ return [
     'slider' => 'السلايد',
     'about' =>'نحن' ,
     'cards' =>'الكروت' ,
-    'gallary' =>'الصور'
+    'gallary' =>'الصور',
+    'skills' =>'مهاراتنا'
 
 ];

@@ -15,6 +15,11 @@ class CreateSkillsTable extends Migration
     {
         Schema::create('skills', function (Blueprint $table) {
             $table->id();
+            $table->text('title_en');
+            $table->text('title_ar');
+            $table->text('text_en');
+            $table->text('text_ar');
+            $table->foreignId('created_by')->constrained('users');
             $table->timestamps();
         });
     }

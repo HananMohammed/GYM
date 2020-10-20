@@ -52,11 +52,11 @@
                                 </a>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                                <a href="{{route('admin.skills.edit')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-line">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">Remarks</span>
+                                    <span class="menu-text d-flex">@lang('sidebar.skills')</span>
                                 </a>
                             </li>
                         </ul>

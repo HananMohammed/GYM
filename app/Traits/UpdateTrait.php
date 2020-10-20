@@ -40,7 +40,7 @@ trait UpdateTrait
 
                     $imageName = $this->upload_image($value) ;
 
-                    $this->updateImage($model, $imageName, $key);
+                    $this->updateImage($updateModel, $imageName, $key);
                 }
             }
         }
@@ -53,8 +53,8 @@ trait UpdateTrait
      * @param $values
      * @param $key
      */
-    public function updateImage($model, $values , $key){
-
+    public function updateImage($model, $values , $key)
+    {
         $imageRecords = $model->image()->get() ;
         if (is_array($values)){
            for ($record = 0 ; $record<count($imageRecords) ; $record++){

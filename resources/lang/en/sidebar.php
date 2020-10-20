@@ -5,5 +5,7 @@ return[
     'about' =>'About' ,
     'cards' =>'Cards',
     'gallary'=>'Gallary',
+    'skills' =>'Skills'
+
 ];
 
