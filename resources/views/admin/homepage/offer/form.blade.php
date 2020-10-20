@@ -110,6 +110,4 @@
         <script>Swal.fire("Good Job", "{{session()->get('success')}}", "success");</script>
     @endif
 @endsection
-<h2 class="text-lg mt-4 mb-5 text-white">
-    احجز مكانك معنا للحصول علي <span class="text-color">عرض صيفي 25% </span>خصم
-</h2>
+
