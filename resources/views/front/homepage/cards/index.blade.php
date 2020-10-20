@@ -14,7 +14,13 @@ $count = 1;
                             <span class="number">0{{$count++}}</span>
                             {!! $card->$title !!}
                             {!! $card->$text !!}
-                            <a href="{{route('front.about')}}" class="text-color text-uppercase font-size-13 letter-spacing font-weight-bold"><i class="ti-minus mr-2 "></i>more Details</a>
+                            <a href="{{route('front.about')}}" class="text-color text-uppercase font-size-13 letter-spacing font-weight-bold">
+                                @if(app()->getLocale()=='ar')
+                                    @lang('front.more-details')<i class="ti-minus mr-2 "></i>
+                                @else
+                                    <i class="ti-minus mr-2 "></i>@lang('front.more-details')
+                                @endif
+                            </a>
                         </div>
                     </div>
                 @endif
