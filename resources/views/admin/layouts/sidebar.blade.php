@@ -59,6 +59,14 @@
                                     <span class="menu-text d-flex">@lang('sidebar.skills')</span>
                                 </a>
                             </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{route('admin.offers.edit')}}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-line">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text d-flex">@lang('sidebar.offers')</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>

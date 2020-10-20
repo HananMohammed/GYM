@@ -55,7 +55,9 @@ trait UpdateTrait
      */
     public function updateImage($model, $values , $key)
     {
+
         $imageRecords = $model->image()->get() ;
+
         if (is_array($values)){
            for ($record = 0 ; $record<count($imageRecords) ; $record++){
                $imageRecords[$record]->update([
@@ -63,6 +65,7 @@ trait UpdateTrait
                ]);
            }
         }else{
+
             $model->image()->update([
                 $key =>$values
             ]);

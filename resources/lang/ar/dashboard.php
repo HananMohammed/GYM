@@ -17,5 +17,7 @@ return[
     'created-by' =>'انشأ بواسطه' ,
     'created-at' =>'تاريخ الانشاء' ,
     'actions' =>'الاجراءات' ,
-    'skills-edit' => 'تعديل المهارات'
+    'skills-edit' => 'تعديل المهارات',
+    'offer-edit'=>'تعديل العرض ' ,
+
 ];
