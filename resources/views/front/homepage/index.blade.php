@@ -4,4 +4,5 @@
 @include('front.homepage.cards.index')
 @include('front.homepage.skills.index')
 @include('front.homepage.offer.index')
+@include('front.homepage.services-category.index')
 @endsection

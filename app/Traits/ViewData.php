@@ -8,6 +8,7 @@ use App\Models\Admin\About;
 use App\Models\Admin\Gallary;
 use App\Models\Admin\IconFont;
 use App\Models\Admin\Offer;
+use App\Models\Admin\ServicesCategory;
 use App\Models\Admin\Skills;
 use App\Models\Admin\Slider;
 use App\Models\Admin\WhyChooseUs;
@@ -25,6 +26,7 @@ class ViewData
             "cards" => WhyChooseUs::all(),
             "skills"=>Skills::first() ,
             "offer" =>Offer::first(),
+            'services-category' =>ServicesCategory::all(),
 
         ];
 
