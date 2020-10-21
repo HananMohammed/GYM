@@ -7,6 +7,8 @@ return[
     'gallary'=>'Gallary',
     'skills' =>'Skills',
     'offers' =>'Offers' ,
+    'categories'=>'Categories',
+    'services' =>'Services' ,
 
 
 ];

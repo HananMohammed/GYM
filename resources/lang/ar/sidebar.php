@@ -7,5 +7,6 @@ return [
     'gallary' =>'الصور',
     'skills' =>'مهاراتنا',
     'offers' =>'العروض' ,
-
+    'categories'=>'التصنيفات',
+    'services' =>'الخدمات'
 ];

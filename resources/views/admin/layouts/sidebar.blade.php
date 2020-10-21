@@ -1,5 +1,5 @@
 <!--begin::Aside-->
-<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto"id="kt_aside">
     <!--begin::Brand-->
     <div class="brand flex-column-auto" id="kt_brand">
         <!--begin::Logo-->
@@ -21,6 +21,7 @@
                         <span class="menu-text">Profile</span>
                     </a>
                 </li>
+                <!--Setting Section Start-->
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-telegram-logo"></i>
@@ -70,6 +71,8 @@
                         </ul>
                     </div>
                 </li>
+                <!--Setting Section End-->
+                <!--About Section Start-->
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-laptop"></i>
@@ -103,6 +106,42 @@
                         </ul>
                     </div>
                 </li>
+                <!--About Section End-->
+                <!--Services Section Start-->
+                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon2-browser-2"></i>
+                        <span class="menu-text">@lang('sidebar.services')</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                <span class="menu-link">
+                                    <span class="menu-text"></span>
+                                </span>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{route('admin.services-category.index')}}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">@lang('sidebar.categories')</span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">@lang('sidebar.services')</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!--Services Section End-->
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-browser-2"></i>
