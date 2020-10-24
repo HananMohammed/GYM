@@ -19,5 +19,6 @@ return[
     'actions' =>'الاجراءات' ,
     'skills-edit' => 'تعديل المهارات',
     'offer-edit'=>'تعديل العرض ' ,
+    'updated_at'=>'تاريخ التعديل' ,
 
 ];

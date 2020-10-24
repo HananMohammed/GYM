@@ -31,6 +31,7 @@ Route::group(['prefix' => 'dashboard'], function(){
     Route::get('offers/edit' ,'OfferController@edit')->name('offers.edit');
     Route::put('offers/update' ,'OfferController@update')->name('offers.update');
     Route::resource('/services-category' ,'ServicesCategoryController' );
+    Route::resource('services' ,'ServiceController') ;
 
 });
 

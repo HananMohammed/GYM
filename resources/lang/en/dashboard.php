@@ -19,6 +19,8 @@ return[
     'actions' =>'Actions',
     'skills-edit'=>'Edit Skills',
     'offer-edit'=>'Edit Offer' ,
+    'updated_at'=>'Updated At' ,
+
 
 ];
 
