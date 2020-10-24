@@ -11,6 +11,7 @@ return[
     'learn-more' =>'Learn More',
     'more-details' =>'More Details' ,
     'join-today' => 'Join Today' ,
+    'our-services'=>'Our Services' ,
 
 
 

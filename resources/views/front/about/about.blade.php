@@ -4,6 +4,8 @@ $title ='title_'.__('lang.lang') ;
 $text = 'text_'.__('lang.lang');
 $images = $data['about']->image()->pluck('image');
 @endphp
+@section('page' ,__('front.about'))
+
 <section class="section about">
     <div class="container">
         <div class="row align-items-center">

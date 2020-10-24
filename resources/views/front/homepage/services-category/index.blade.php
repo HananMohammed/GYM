@@ -16,11 +16,12 @@ $title = 'title_'.__('lang.lang');
         </div>
         <div class="row no-gutters">
             @foreach($data["services-category"] as $category)
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="text-center  px-4 py-5 hover-style-1">
-                    {!!$category->icon()->pluck('icon')[0]!!}
-                    <h4 class="mt-3 mb-4 text-uppercase">{{$category->$title}}</h4>
-                    <p>{{$category->$text}}</p>
+            <div class="col-lg-4 col-md-6 col-sm-6"><div class="text-center  px-4 py-5 hover-style-1">
+                    <a href="{{urldecode(route('front.services.redirect' ,["id"=>$category->id ,"title" => str_replace(' '  ,'-',$category->title_en)]))}}" style="text-decoration: none;color:inherit;">
+                        {!!$category->icon()->pluck('icon')[0]!!}
+                        <h4 class="mt-3 mb-4 text-uppercase">{{$category->$title}}</h4>
+                        <p>{{$category->$text}}</p>
+                    </a>
                 </div>
             </div>
             @endforeach

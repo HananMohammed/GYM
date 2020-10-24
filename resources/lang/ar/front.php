@@ -11,7 +11,7 @@ return[
     'learn-more' =>'تعلم أكثر',
     'more-details' =>'تفاصيل أكثر',
     'join-today' => 'انضم معنا' ,
-
+    'our-services'=>'خدماتنا',
 
 
 

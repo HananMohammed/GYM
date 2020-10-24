@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function() { return view('front.homepage.index');})->name('homepage');
 
 Route::get('/about' , function (){ return view('front.about.index'); })->name('about');
-
+Route::get('/services/{id}/{title}' ,'ServicesController@services')->name('services.redirect');

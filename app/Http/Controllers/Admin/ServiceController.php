@@ -93,6 +93,8 @@ class ServiceController extends Controller
      */
     public function destroy(Service $service)
     {
-        //
+        $service->delete() ;
+        return back()->with('success' , 'Service Deleted Successfully') ;
+
     }
 }
