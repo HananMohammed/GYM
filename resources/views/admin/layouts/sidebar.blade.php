@@ -138,6 +138,14 @@
                                     <span class="menu-text">@lang('sidebar.services')</span>
                                 </a>
                             </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="{{route('admin.opinions.index')}}" class="menu-link">
+                                    <i class="menu-bullet menu-bullet-dot">
+                                        <span></span>
+                                    </i>
+                                    <span class="menu-text">@lang('sidebar.opinions')</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>

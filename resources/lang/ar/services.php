@@ -11,8 +11,12 @@ return[
     'image'=>'الصوره' ,
     'services' =>'الخدمات' ,
     'new-service'=>'خدمه جديده' ,
-    'edit-service'=>'تعديل الخدمه'
-
+    'edit-service'=>'تعديل الخدمه',
+    'edit-opinion' =>'تعديل أراء الموظفين',
+    'new-opinion' =>'اضافه رأي',
+    'opinion' =>' أراء الموظف',
+    'name'=>'الاسم',
+    'role'=>'المنصب',
 
 
 ];

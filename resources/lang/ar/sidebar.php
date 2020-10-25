@@ -8,5 +8,6 @@ return [
     'skills' =>'مهاراتنا',
     'offers' =>'العروض' ,
     'categories'=>'التصنيفات',
-    'services' =>'الخدمات'
+    'services' =>'الخدمات',
+    'opinions'=>'الأراء'
 ];

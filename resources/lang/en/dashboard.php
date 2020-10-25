@@ -20,6 +20,16 @@ return[
     'skills-edit'=>'Edit Skills',
     'offer-edit'=>'Edit Offer' ,
     'updated_at'=>'Updated At' ,
+    'name_en'=>'Name.EN' ,
+    'name_ar'=>'Name.AR',
+    'role_en'=>'Role.EN',
+    'role_ar'=>'Role.AR',
+    'counter'=>'Counter',
+    'enter-counter'=>'Enter Counter',
+    'enter-english-name'=>'Enter English Name',
+    'enter-arabic-name'=>'Enter Arabic Name',
+    'enter-english-role'=>'Enter English Role',
+    'enter-arabic-role'=>'Enter Arabic Role',
 
 
 ];

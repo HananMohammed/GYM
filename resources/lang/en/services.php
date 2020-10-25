@@ -12,6 +12,11 @@ return[
     'services' =>'Services' ,
     'new-service'=>'New Service' ,
     'edit-service'=>'Edit Service' ,
+    'edit-opinion' =>'Edit Employees Opinion',
+    'new-opinion' =>'New Opinion',
+    'opinion' =>'Employee Opinion',
+    'name'=>'Name',
+    'role'=>'Role',
 
 
 
