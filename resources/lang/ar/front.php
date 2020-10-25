@@ -12,6 +12,7 @@ return[
     'more-details' =>'تفاصيل أكثر',
     'join-today' => 'انضم معنا' ,
     'our-services'=>'خدماتنا',
+    'What-People-say'=>'أراء الاشخاص '
 
 
 

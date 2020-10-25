@@ -4,4 +4,5 @@
 @section('content')
     @include('front.internal-slider.index')
     @include('front.services.services')
+    @include('front.services.openions.index')
 @endsection

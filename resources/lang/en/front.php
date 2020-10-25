@@ -12,6 +12,7 @@ return[
     'more-details' =>'More Details' ,
     'join-today' => 'Join Today' ,
     'our-services'=>'Our Services' ,
+    'What-People-say'=>'What People Say'
 
 
 

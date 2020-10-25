@@ -68,19 +68,6 @@
 	});
 
 
-
-	$('.testimonial-slider').slick({
-		slidesToShow: 1,
-		infinite: true,
-		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 5000,
-		dots: true
-	});
-
-
-
-
 	// Init Magnific Popup
 	$('.portfolio-popup').magnificPopup({
 		delegate: 'a',
