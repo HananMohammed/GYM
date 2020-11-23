@@ -153,23 +153,23 @@
                 <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
                         <i class="menu-icon flaticon2-browser-2"></i>
-                        <span class="menu-text">Reports</span>
+                        <span class="menu-text">@lang('sidebar.classes')</span>
                         <i class="menu-arrow"></i>
                     </a>
                     <div class="menu-submenu">
                         <i class="menu-arrow"></i>
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
-												<span class="menu-link">
-													<span class="menu-text">Reports</span>
-												</span>
+                                <span class="menu-link">
+                                    <span class="menu-text">@lang('sidebar.categories')</span>
+                                </span>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                                <a href="{{route('admin.class-categories.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">Cases</span>
+                                    <span class="menu-text">@lang('sidebar.categories')</span>
                                 </a>
                             </li>
                             <li class="menu-item" aria-haspopup="true">

@@ -9,5 +9,6 @@ return [
     'offers' =>'العروض' ,
     'categories'=>'التصنيفات',
     'services' =>'الخدمات',
-    'opinions'=>'الأراء'
+    'opinions'=>'الأراء' ,
+    'classes' => 'التدريبات'
 ];

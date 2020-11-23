@@ -9,7 +9,9 @@ return[
     'offers' =>'Offers' ,
     'categories'=>'Categories',
     'services' =>'Services' ,
-    'opinions'=>'Opinions'
+    'opinions'=>'Opinions',
+    'classes' => 'Classes',
+
 
 
 ];
