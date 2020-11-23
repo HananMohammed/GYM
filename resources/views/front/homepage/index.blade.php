@@ -1,8 +1,11 @@
 @extends('front.layouts.app')
+@section('title' , 'Homepage')
 @section('content')
 @include('front.homepage.slider.index')
 @include('front.homepage.cards.index')
 @include('front.homepage.skills.index')
 @include('front.homepage.offer.index')
 @include('front.homepage.services-category.index')
+@include('front.gallary.index')
+@include('front.homepage.openions.index')
 @endsection

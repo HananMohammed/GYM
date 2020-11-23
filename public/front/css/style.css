@@ -404,6 +404,26 @@ ul.dropdown-menu li {
   opacity: .8;
 }
 
+.opinion-title h2
+{
+    position: relative;
+}
+
+.opinion-title h2:after
+{
+    content: '';
+    position: absolute;
+    top:-50%;
+    /*left:50%;*/
+    /*right:50%;*/
+    left:0;
+    right:0;
+    margin:auto;
+    border-top: solid 5px #f5634b;
+    width:5%;
+    /*transform: translate(-50%, 0px);*/
+}
+
 .bg-2 {
   background: url("../images/bg/bg-image-2-1.jpg") no-repeat;
   background-size: cover;

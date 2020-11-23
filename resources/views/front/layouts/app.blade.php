@@ -43,8 +43,6 @@
 <script src="{{asset_public('front/plugins/jquery/jquery.js')}}"></script>
 <!-- Bootstrap 4.3.1 -->
 <script src="{{asset_public('front/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
-<!-- Slick Slider -->
-<script src="{{asset_public('front/plugins/slick-carousel/slick/slick.min.js')}}"></script>
 <!--  Magnific Popup-->
 <script src="{{asset_public('front/plugins/magnific-popup/dist/jquery.magnific-popup.min.js')}}"></script>
 <!-- Form Validator -->
@@ -53,6 +51,8 @@
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
 <script src="{{asset_public('front/plugins/google-map/gmap.js')}}"></script>
+<!-- Slick Slider -->
+<script src="{{asset_public('front/plugins/slick-carousel/slick/slick.min.js')}}"></script>
 <script src="{{asset_public('front/js/script.js')}}"></script>
 @yield('scripts')
 </body>
