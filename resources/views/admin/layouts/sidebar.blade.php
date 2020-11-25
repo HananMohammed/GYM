@@ -173,19 +173,19 @@
                                 </a>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                                <a href="{{route('admin.courses.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">Messages</span>
+                                    <span class="menu-text">@lang('sidebar.courses')</span>
                                 </a>
                             </li>
                             <li class="menu-item" aria-haspopup="true">
-                                <a href="#" class="menu-link">
+                                <a href="{{route('admin.features.index')}}" class="menu-link">
                                     <i class="menu-bullet menu-bullet-dot">
                                         <span></span>
                                     </i>
-                                    <span class="menu-text">Reports</span>
+                                    <span class="menu-text">@lang('sidebar.features')</span>
                                 </a>
                             </li>
                             <li class="menu-item" aria-haspopup="true">

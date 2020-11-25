@@ -35,6 +35,8 @@ Route::group(['prefix' => 'dashboard'], function(){
     Route::resource('opinions' ,'OpinionController') ;
     Route::resource('class-categories' ,'ClassCategoryController') ;
     Route::get("/class-category-data" ,'ClassCategoryController@edit')->name('category.data');
+    Route::resource('courses' ,'CoursesController') ;
+    Route::resource('features' ,'ClassFeatureController') ;
 
 });
 

@@ -19,11 +19,13 @@ class CreateCoursesTable extends Migration
             $table->string("name_ar");
             $table->text("text_en");
             $table->text("text_ar");
-            $table->integer("hours_en");
-            $table->integer("calories_en");
+            $table->integer("hours");
+            $table->integer("calories");
             $table->tinyInteger("workout_intensity");
-            $table->text("date");
-            $table->text("time");
+            $table->text("day");
+            $table->text("time_start");
+            $table->text("time_end");
+            $table->string("category");
             $table->tinyInteger('created_by');
             $table->timestamps();
         });

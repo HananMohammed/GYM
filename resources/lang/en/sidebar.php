@@ -11,6 +11,9 @@ return[
     'services' =>'Services' ,
     'opinions'=>'Opinions',
     'classes' => 'Classes',
+    'courses'=>'Courses',
+    'features'=>'Features'
+
 
 
 

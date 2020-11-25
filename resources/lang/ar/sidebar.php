@@ -10,5 +10,7 @@ return [
     'categories'=>'التصنيفات',
     'services' =>'الخدمات',
     'opinions'=>'الأراء' ,
-    'classes' => 'التدريبات'
+    'classes' => 'التدريبات',
+    'courses'=>'الكورسات',
+    'features'=>'المميزات'
 ];
