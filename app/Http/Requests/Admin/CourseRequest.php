@@ -29,6 +29,8 @@ class CourseRequest extends FormRequest
             "name_ar" =>"required|string|max:255",
             "text_en"=>"required|string" ,
             "text_ar"=>"required|string" ,
+            "mentor_en"=>"required|string",
+            "mentor_ar"=>"required|string",
             "category"=>"required" ,
             "hours"=>"required|numeric",
             "calories" =>"required|numeric" ,

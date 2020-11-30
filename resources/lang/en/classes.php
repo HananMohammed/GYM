@@ -30,7 +30,11 @@ return [
     "evening"=>"Evening" ,
     "price"=>"Price",
     "enter-price"=>"Enter Price" ,
-    "select-course"=>"Select Course"
+    "select-course"=>"Select Course",
+    "mentor_ar"=>"Mentor.ar",
+    "mentor_en"=>"Mentor.en",
+    "enter-arabic-mentor"=>"enter arabic mentor",
+    "enter-english-mentor"=>"enter english mentor",
 
 
 

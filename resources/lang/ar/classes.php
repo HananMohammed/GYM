@@ -30,7 +30,11 @@ return [
     "evening"=>"مسائي" ,
     "price"=>"السعر" ,
     "enter-price"=>"ادخل السعر" ,
-    "select-course"=>"اختيار الكورس"
+    "select-course"=>"اختيار الكورس",
+    "mentor_ar"=>"اسم المشرف باللغه العربيه ",
+    "mentor_en"=>"اسم المشرف باللغه الانجليزيه ",
+    "enter-arabic-mentor"=>"ادخل اسم المشرف باللغه العربيه ",
+    "enter-english-mentor"=>"ادخل اسم المشرف باللغه الانجليزيه ",
 
 
 

@@ -113,6 +113,18 @@
         </div>
         <div class="col-lg-6 col-sm-12">
             <div class="form-group">
+                <label for="mentor_ar">@lang('classes.mentor_ar')<label class="text-danger">*</label></label>
+                <input type="text" name="mentor_ar"value="{{old('mentor_ar')??$course->mentor_ar}}" class="form-control" id="mentor_ar" placeholder="@lang('classes.enter-arabic-mentor')" >
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="form-group">
+                <label for="mentor_en">@lang('classes.mentor_en')<label class="text-danger">*</label></label>
+                <input type="text" name="mentor_en"value="{{old('mentor_en')??$course->mentor_en}}" class="form-control" id="mentor_en" placeholder="@lang('classes.enter-english-mentor')" >
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class="form-group">
                 <label for="content_en">@lang('dashboard.text_en')<label class="text-danger">*</label></label>
                 <textarea name="text_en" id="content_en" class="form-control summernote"  placeholder="@lang('dashboard.enter-english-text')" >
                      {{old('text_en')??$course->text_en}}

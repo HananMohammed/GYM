@@ -1,7 +1,15 @@
 @extends('admin.layouts.app')
 
 @section('title', 'Courses')
-
+@if(app()->getLocale()=='en')
+    @section("styles")
+        <style>
+            .courses-btn{
+                margin-bottom: 5px;
+            }
+        </style>
+    @stop
+@endif
 @section('content')
 
     <!--begin::Subheader-->
@@ -98,7 +106,7 @@
                                                 <td>{{$course->workout_intensity}}</td>
                                                 <td>
                                                     @foreach(json_decode($course->day, true) as $day)
-                                                        <ul>
+                                                        <ul class="courses-btn">
                                                             <li class="btn btn-success"  style="display: flex">
                                                                 <i class="flaticon2-pie-chart"></i> {{$day}}
                                                             </li>
