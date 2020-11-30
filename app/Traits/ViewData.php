@@ -5,6 +5,7 @@ namespace App\Traits;
 
 
 use App\Models\Admin\About;
+use App\Models\Admin\Courses;
 use App\Models\Admin\Gallary;
 use App\Models\Admin\IconFont;
 use App\Models\Admin\Offer;
@@ -28,7 +29,7 @@ class ViewData
             "title_".$locale.' as title',
             "text_".$locale.' as text',
             "counter")->get();
-
+//        $courses = Courses::select("id", "name_".$locale." as name" ,)
         $data = [
             "slider" => Slider::all(),
             "gallary" =>Gallary::all(),
