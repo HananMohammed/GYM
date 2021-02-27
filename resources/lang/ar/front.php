@@ -4,6 +4,7 @@ return[
     "about" =>"من نحن",
     "what-we-are" =>" من نكون" ,
     'services'=>'الخدمات' ,
+    "offers" => "العروض",
     'est'=>'انشأ:' ,
     'why-choose-us' =>'لماذا تختارنا' ,
     'our-gallery'=>'معرض الصور',
@@ -12,7 +13,10 @@ return[
     'more-details' =>'تفاصيل أكثر',
     'join-today' => 'انضم معنا' ,
     'our-services'=>'خدماتنا',
-    'What-People-say'=>'أراء الاشخاص '
+    'contact'=>'تواصل معنا',
+    'What-People-say'=>'أراء الاشخاص ',
+    "send-message" => "ارسال الرساله",
+    "reviews" => "الأراء"
 
 
 

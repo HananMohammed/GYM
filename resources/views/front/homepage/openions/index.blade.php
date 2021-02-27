@@ -1,4 +1,4 @@
-<section class="section textimonial position-relative bg-3" style="background: url({{asset_public('front/images/bg-cta.jpg')}})">
+<section id="reviews" class="section textimonial position-relative bg-3" style="background: url({{asset_public('front/images/bg-cta.jpg')}})">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">

@@ -7,7 +7,7 @@
                     <li class="list-inline-item"><span class="text-white">|</span></li>
                     <li class="list-inline-item"><a href="{{\Illuminate\Support\Facades\URL::current()}}" class="text-color text-uppercase text-sm letter-spacing">@yield('page')</a></li>
                 </ul>
-                <h1 class="text-lg text-white mt-2">@lang('front.what-we-are')</h1>
+                <h1 class="text-lg text-white mt-2">@if(Route::getCurrentRoute()->uri() == "en/contact-us") @lang('front.contact') @else @lang('front.what-we-are') @endif</h1>
             </div>
         </div>
     </div>

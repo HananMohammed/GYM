@@ -12,29 +12,15 @@
         <div class="collapse text-center navbar-collapse" id="navbarsid">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{route('front.homepage')}}">@lang('front.home') <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false">Pages.</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="about.html">About</a></li>
-                        <li><a class="dropdown-item" href="trainer.html">Trainer</a></li>
-                        <li><a class="dropdown-item" href="course.html">Courses</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="pricing.html">Memebership</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false">Blog.</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="blog.html">Blog Grid</a></li>
-                        <li><a class="dropdown-item" href="blog-sidebar.html">Blog Sidebar</a></li>
-                        <li><a class="dropdown-item" href="blog-single.html">Blog Details</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('front.contact')}}">@lang('front.contact')</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('front.about')}}">@lang('front.about')</a></li>
+                <li class="nav-item"><a class="nav-link" href="#offersSection">@lang('front.offers')</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicesSection">@lang('front.services')</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallary">@lang('front.our-gallery')</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews">@lang('front.reviews')</a></li>
+
             </ul>
             <div class="my-md-0 ml-lg-4 mt-4 mt-lg-0 ml-auto text-lg-right mb-3 mb-lg-0">
                 @if(app()->getLocale() =='ar')
@@ -49,7 +35,7 @@
             </div>
             <div class="my-md-0 ml-lg-4 mt-4 mt-lg-0 ml-auto text-lg-right mb-3 mb-lg-0">
                 <a href="tel:+23-345-67890">
-                    <h3 class="text-color mb-0"><i class="ti-mobile mr-2"></i>+23-563-5688</h3>
+                    <h3 class="text-color mb-0"><i class="ti-mobile mr-2"></i>+201201611733</h3>
                 </a>
             </div>
         </div>

@@ -3,7 +3,7 @@ $text = 'text_'.__('lang.lang');
 $title = 'title_'.__('lang.lang');
 @endphp
 <!-Start Service Category Section-->
-<section class="section services ">
+<section class="section services " id="servicesSection">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
