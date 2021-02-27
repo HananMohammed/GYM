@@ -4,43 +4,28 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
                 <h2 class="text-white mb-4">GymFit</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus illo ad quo sunt maiores, sint nostrum omnis eaque cumque dolorum.</p>
+                <p>@lang('front.offer')</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p>@lang('front.offer2')</p>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                <div class="footer-widget recent-blog">
-                    <h4 class="mb-4 text-white letter-spacing text-uppercase">Recents Posts</h4>
-                    <div>
-                        <a href="blog-single.html"class="text-white">Claritas est etiam processus dynamicus</a>
-                        <p class="text-sm mt-2 text-white-50">30 february 2019</p>
-                    </div>
-                    <div class="mt-4">
-                        <a href="blog-single.html"class="text-white">Claritas est etiam processus dynamicus</a>
-                        <p class="text-sm mt-2 text-white-50">30 february 2019</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-5 mb-5 mb-lg-0">
+            <div class="col-lg-4 col-md-5 mb-5 mb-lg-0">
                 <div class="footer-widget">
                     <h4 class="mb-4 text-white letter-spacing text-uppercase">Quick Links</h4>
                     <ul class="list-unstyled footer-menu lh-40 mb-0">
-                        <li><a href="about.html"><i class="ti-angle-double-right mr-2"></i>About Us</a></li>
-                        <li><a href="service.html"><i class="ti-angle-double-right mr-2"></i>Services</a></li>
-                        <li><a href="pricing.html"><i class="ti-angle-double-right mr-2"></i>Membership</a></li>
-                        <li><a href="course.html"><i class="ti-angle-double-right mr-2"></i>Courses</a></li>
-                        <li><a href="contact.html"><i class="ti-angle-double-right mr-2"></i>Contact us</a></li>
+                        <li><a href="{{route('front.contact')}}"><i class="ti-angle-double-right mr-2"></i>@lang('front.contact')</a></li>
+                        <li><a href="{{route('front.about')}}"><i class="ti-angle-double-right mr-2"></i>@lang('front.about')</a></li>
+                        <li><a href="#offersSection"><i class="ti-angle-double-right mr-2"></i>@lang('front.offers')</a></li>
+                        <li><a href="#servicesSection"><i class="ti-angle-double-right mr-2"></i>@lang('front.services')</a></li>
+                        <li><a href="contact.html"><i class="ti-angle-double-right mr-2"></i>@lang('front.reviews')</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-5">
+            <div class="col-lg-4 col-md-5">
                 <div class="footer-widget">
-                    <h4 class="mb-4 text-white letter-spacing text-uppercase">Home location</h4>
-                    <p>Cairo, Egypt
-                        hwy., Alexandria, VA USA 22303 </p>
-                    <span class="text-white">+1 (409) 987–5874</span>
-                    <span class="text-white">info@demolink.org</span>
+                    <h4 class="mb-4 text-white letter-spacing text-uppercase">@lang('front.location')</h4>
+                    <p>@lang('front.location2')</p>
+                    <span class="text-white">+201201611733</span>
+                    <span class="text-white">info@gymfit.com</span>
                 </div>
             </div>
         </div>
