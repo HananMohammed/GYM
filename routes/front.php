@@ -18,3 +18,4 @@ Route::get('/', function() { return view('front.homepage.index');})->name('homep
 Route::get('/about' , function (){ return view('front.about.index'); })->name('about');
 Route::get('/contact-us' , function (){ return view('front.contact.index'); })->name('contact');
 Route::get('/services/{id}/{title}' ,'ServicesController@services')->name('services.redirect');
+Route::post('/send-contact-email', 'ContactController@sendMail')->name('send-contact-email');

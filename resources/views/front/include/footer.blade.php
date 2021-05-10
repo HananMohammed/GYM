@@ -14,9 +14,11 @@
                     <ul class="list-unstyled footer-menu lh-40 mb-0">
                         <li><a href="{{route('front.contact')}}"><i class="ti-angle-double-right mr-2"></i>@lang('front.contact')</a></li>
                         <li><a href="{{route('front.about')}}"><i class="ti-angle-double-right mr-2"></i>@lang('front.about')</a></li>
+                        @if(\Illuminate\Support\Facades\Route::currentRouteName() == "front.homepage")
                         <li><a href="#offersSection"><i class="ti-angle-double-right mr-2"></i>@lang('front.offers')</a></li>
                         <li><a href="#servicesSection"><i class="ti-angle-double-right mr-2"></i>@lang('front.services')</a></li>
                         <li><a href="contact.html"><i class="ti-angle-double-right mr-2"></i>@lang('front.reviews')</a></li>
+                        @endif
                     </ul>
                 </div>
             </div>

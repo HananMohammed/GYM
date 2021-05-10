@@ -12,22 +12,32 @@
 
         <div class="row justify-content-center pb-5">
             <div class="col-lg-9 text-center">
-                <form id="contact-form">
+                <form id="contact-form" action="{{route('front.send-contact-email')}}" method="post">
+                    @csrf
                     <div class="form-row">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <input name="user_name" type="text" class="form-control" placeholder="Your Name">
+                                <input name="name" id="name" type="text" class="form-control" value="{{old('name')}}" placeholder="Your Name">
+                           @error('name')
+                                <label for="#name" class="error">{{ $message }}</label>
+                            @enderror
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="form-group">
-                                <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+                                <input name="email" id="email" type="text" class="form-control"  value="{{old('email')}}" placeholder="Email Address">
+                                @error('email')
+                                <label for="#email" class="error">{{ $message }}</label>
+                                @enderror
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="form-group-2">
-                                <textarea name="user_message" class="form-control" rows="8" placeholder="Your Message"></textarea>
+                                <textarea name="message" id="message" class="form-control" rows="8" placeholder="Your Message">{{old('message')}}</textarea>
+                                @error('message')
+                                <label for="#message" class="error">{{ $message }}</label>
+                                @enderror
                             </div>
 
                             <div class="text-center">
@@ -44,8 +54,7 @@
 
 
     <div class="google-map position-relative mt-5">
-        <div class="map" id="map_canvas" data-latitude="51.507351" data-longitude="-0.127758"
-             data-marker="{{asset_public('front/images/marker.png')}}"></div>
+        <iframe  class="map" id="map_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.891244843036!2d31.32969091164425!3d30.693335881285552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7ebea212b9987%3A0x56e393ad2a2feb84!2z2KjZgtin2YTYqSDYrNmF2KfZhCDZhti12YrYsQ!5e0!3m2!1sar!2seg!4v1619948835456!5m2!1sar!2seg" loading="lazy"></iframe>
     </div>
     <div class="container mt--170">
         <div class="row">

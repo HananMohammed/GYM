@@ -30,6 +30,11 @@ return[
     'enter-arabic-name'=>'Enter Arabic Name',
     'enter-english-role'=>'Enter English Role',
     'enter-arabic-role'=>'Enter Arabic Role',
+    'mails'=>'Mails',
+    'send_at'=>'Send.At',
+    'name'=>'name',
+    'email'=>'email',
+    'message'=>'message',
 
 
 ];

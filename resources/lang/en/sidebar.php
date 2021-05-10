@@ -9,7 +9,11 @@ return[
     'offers' =>'Offers' ,
     'categories'=>'Categories',
     'services' =>'Services' ,
-    'opinions'=>'Opinions'
+    'opinions'=>'Opinions',
+    'emails'=>'Emails',
+    'inbox'=>'Inbox',
+    'logout' => 'Logout'
+
 
 
 ];

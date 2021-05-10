@@ -33,6 +33,6 @@ Route::group(['prefix' => 'dashboard'], function(){
     Route::resource('/services-category' ,'ServicesCategoryController' );
     Route::resource('services' ,'ServiceController') ;
     Route::resource('opinions' ,'OpinionController') ;
-
+    Route::get('/mails', 'ContactController@index')->name('mails');
 });
 

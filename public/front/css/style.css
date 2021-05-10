@@ -244,7 +244,12 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 #success, #error {
   display: none;
 }
+.error{
+    color: #f5634b;
+    font-weight: 800;
+    font-size: 12px;
 
+}
 .text-color {
   color: #f5634b;
 }

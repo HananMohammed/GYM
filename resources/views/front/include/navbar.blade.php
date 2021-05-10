@@ -16,11 +16,12 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{route('front.contact')}}">@lang('front.contact')</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{route('front.about')}}">@lang('front.about')</a></li>
+                @if(\Illuminate\Support\Facades\Route::currentRouteName() == "front.homepage")
                 <li class="nav-item"><a class="nav-link" href="#offersSection">@lang('front.offers')</a></li>
                 <li class="nav-item"><a class="nav-link" href="#servicesSection">@lang('front.services')</a></li>
                 <li class="nav-item"><a class="nav-link" href="#gallary">@lang('front.our-gallery')</a></li>
                 <li class="nav-item"><a class="nav-link" href="#reviews">@lang('front.reviews')</a></li>
-
+                @endif
             </ul>
             <div class="my-md-0 ml-lg-4 mt-4 mt-lg-0 ml-auto text-lg-right mb-3 mb-lg-0">
                 @if(app()->getLocale() =='ar')

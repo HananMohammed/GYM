@@ -9,5 +9,8 @@ return [
     'offers' =>'العروض' ,
     'categories'=>'التصنيفات',
     'services' =>'الخدمات',
-    'opinions'=>'الأراء'
+    'opinions'=>'الأراء',
+    'emails'=>'الايميلات',
+    'inbox'=>'الوارد',
+    'logout' => 'تسجيل الخروج'
 ];
